@@ -1,0 +1,3 @@
+Test IDK v0.03
+
+the screen turns black before the rectangle so now the rectangle moves. 

@@ -1,0 +1,5 @@
+Test IDK v0.01
+
+Nothing really its just a black screen or a rectangle idk
+
+UPDATE: i was idiot and forgot to call a function. thats a small bug and wont be a new version

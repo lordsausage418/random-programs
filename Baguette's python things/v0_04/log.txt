@@ -1,0 +1,3 @@
+Test IDK v0.04
+
+the rectangle can no longer move off the screen
