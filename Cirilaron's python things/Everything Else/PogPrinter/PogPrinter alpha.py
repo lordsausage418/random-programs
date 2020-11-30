@@ -1,6 +1,6 @@
 import tkinter as tk
 window = tk.Tk()
-window.title("PogPrinter proto")
+window.title("PogPrinter alpha")
 window.geometry("350x200")
 lbl = tk.Label(window, text="Press button to print pog into console")
 lbl.grid(column=5, row=0)
