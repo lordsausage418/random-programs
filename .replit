@@ -1,2 +1,3 @@
 language = "python3"
-run = "echo hello world"
+run = "python project_sigma.py"
+onBoot = "cd """Cirilaron's python things\\Project Sigma""""
