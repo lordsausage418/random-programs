@@ -3,7 +3,7 @@ import tkinter as tk
 
 root = tk.Tk()
 root.configure(bg="black")
-root.geometry("450x500")
+root.geometry("500x500")
 root.title("Project Sigma")
 
 frame = tk.Frame(root, bg="black")

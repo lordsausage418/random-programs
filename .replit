@@ -1,5 +1,2 @@
 language = "pygame"
-sigmadir = "Cirilaron's python things/Project Sigma"
-pythonrunner = "python "
-sigmafile = "/project_sigma.py"
 run = "python \"Cirilaron's python things/Project Sigma/project_sigma.py\""
