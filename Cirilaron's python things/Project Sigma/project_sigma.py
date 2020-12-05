@@ -3,7 +3,7 @@ import tkinter as tk
 
 root = tk.Tk()
 root.configure(bg="black")
-root.geometry("400x450")
+root.geometry("450x500")
 root.title("Project Sigma")
 
 frame = tk.Frame(root, bg="black")
@@ -14,10 +14,10 @@ bottomframe.pack(side="bottom")
 
 labelone = tk.Label(frame, bg="black", fg="green", text="Hi, i'm a program made by Cirilaron.\n My name is Sigma.\n I will have most of his programs later.")
 labelone.pack(side="top")
-labelone.config(font=("Courier", 10))
+labelone.config(font=("Courier", 15))
 
-labeltwo = tk.Label(bottomframe, bg="black", fg="green", text="Press the button to open the command menu")
-labeltwo.config(font=("Courier", 10))
+labeltwo = tk.Label(bottomframe, bg="black", fg="green", text="Press the button to open the program menu")
+labeltwo.config(font=("Courier", 15))
 labeltwo.pack(side="top")
 
 def triangle():
