@@ -1,6 +1,4 @@
 import turtle
-import random
-import time
 import tkinter as tk
 
 ispog = "waiting"
@@ -24,14 +22,14 @@ btnno.grid(column=6, row=1)
 question.mainloop()
 
 if ispog == "yes":
-    
+
     wn = turtle.Screen()
     wn.bgcolor("black")
 
     defaultsettings = "waiting"
     question = tk.Tk()
     question.geometry("200x100")
-    question.title("ADHP")
+    question.title("default settings")
     lbl = tk.Label(question, text="do you wanna use default settings?")
     lbl.grid(column=5, row=0)
     def defaultyes():
@@ -51,30 +49,29 @@ if ispog == "yes":
     if defaultsettings == "yes":
 
         wn.bgcolor("black")
-        wn.title("Python Turtle - The Game: Now Playing As: daniel")
-
-        david = turtle.Turtle()
-        david.color("white", "gray")
-        david.pensize(width=10)
-        david.shape("turtle")
+        wn.title("Python Turtle - The Game: Now Playing As: david")
+        trtl1 = turtle.Turtle()
+        trtl1.color("white", "gray")
+        trtl1.pensize(width=10)
+        trtl1.shape("turtle")
 
         def fwd():
-            david.fd(75)
+            trtl1.fd(75)
 
         def tleft():
-            david.left(45)
+            trtl1.left(45)
 
         def tright():
-            david.right(45)
+            trtl1.right(45)
 
         def taround():
-            david.left(180)
+            trtl1.left(180)
 
         def penrise():
-            david.penup()
+            trtl1.penup()
 
         def penfall():
-            david.pendown()
+            trtl1.pendown()
 
         wn.onkey(fwd, "w")
         wn.onkey(tleft, "a")
@@ -97,38 +94,37 @@ if ispog == "yes":
         trtlpenwidth = turtle.numinput("turtle pen width", "what is width of turtle's pen? number")
         trtlshape = turtle.textinput("turtle shape", "what shape is turtle? arrow, turtle, circle, square or triangle. lowercase, anything else for classic")
         trtlgender = turtle.textinput("turtle gender", "what gender is turtle? male or female, lowercase, anything else for non-binary")
+
         if trtlamount == 1:
-            if trtlgender == "male":
                 wn.bgcolor(wndwbgcolor)
-                wn.title("Python Turtle - The Game: Now Playing As: david")
 
-                david = turtle.Turtle()
-                david.color(trtlpencolor, trtlfillcolor)
-                david.pensize(width=trtlpenwidth)
+                trtl1 = turtle.Turtle()
+                trtl1.color(trtlpencolor, trtlfillcolor)
+                trtl1.pensize(width=trtlpenwidth)
                 if trtlshape == "arrow" or "turtle" or "circle" or "triangle" or "square":
                 
-                   david.shape(trtlshape)
+                   trtl1.shape(trtlshape)
 
                 else:
-                    david.shape("classic")
+                    trtl1.shape("classic")
             
                 def fwd():
-                    david.fd(75)
+                    trtl1.fd(75)
 
                 def tleft():
-                    david.left(45)
+                    trtl1.left(45)
 
                 def tright():
-                    david.right(45)
+                    trtl1.right(45)
 
                 def taround():
-                    david.left(180)
+                    trtl1.left(180)
 
                 def penrise():
-                    david.penup()
+                    trtl1.penup()
 
                 def penfall():
-                    david.pendown()
+                    trtl1.pendown()
 
                 wn.onkey(fwd, "w")
                 wn.onkey(tleft, "a")
@@ -136,93 +132,16 @@ if ispog == "yes":
                 wn.onkey(taround, "s")
                 wn.onkey(penrise, "r")
                 wn.onkey(penfall, "f")
-        
-                turtle.listen()
-        
-                turtle.mainloop()
-            elif trtlgender == "female":
-                wn.bgcolor(wndwbgcolor)
-                wn.title("Python Turtle - The Game: Now Playing As: jane")
+
+                if trtlgender == "male":
+                   wn.title("Python Turtle - The Game: Now Playing As: david")
+
+                elif trtlgender == "female":
+                   wn.title("Python Turtle - The Game: Now Playing As: jane")
                 
-                jane = turtle.Turtle()
-                jane.color(trtlpencolor, trtlfillcolor)
-                jane.pensize(width=trtlpenwidth)
-                if trtlshape == "arrow" or "turtle" or "circle" or "triangle" or "square":
-                    
-                   jane.shape(trtlshape)
-        
                 else:
-                    jane.shape("classic")
-            
-                def fwd():
-                    jane.fd(75)
-
-                def tleft():
-                    jane.left(45)
-        
-                def tright():
-                    jane.right(45)
-
-                def taround():
-                    jane.left(180)
-
-                def penrise():
-                    jane.penup()
-
-                def penfall():
-                    jane.pendown()
-
-                wn.onkey(fwd, "w")
-                wn.onkey(tleft, "a")
-                wn.onkey(tright, "d")
-                wn.onkey(taround, "s")
-                wn.onkey(penrise, "r")
-                wn.onkey(penfall, "f")
-        
+                   wn.title("Python Turtle - The Game: Now Playing As: robin")
                 turtle.listen()
-        
-                turtle.mainloop()
-            else:
-                wn.bgcolor(wndwbgcolor)
-                wn.title("Python Turtle - The Game: Now Playing As: robin")
-
-                robin = turtle.Turtle()
-                robin.color(trtlpencolor, trtlfillcolor)
-                robin.pensize(width=trtlpenwidth)
-                if trtlshape == "arrow" or "turtle" or "circle" or "triangle" or "square":
-                
-                   robin.shape(trtlshape)
-
-                else:
-                    robin.shape("classic")
-            
-                def fwd():
-                    robin.fd(75)
-
-                def tleft():
-                    robin.left(45)
-
-                def tright():
-                    robin.right(45)
-
-                def taround():
-                    robin.left(180)
-
-                def penrise():
-                    robin.penup()
-
-                def penfall():
-                    robin.pendown()
-
-                wn.onkey(fwd, "w")
-                wn.onkey(tleft, "a")
-                wn.onkey(tright, "d")
-                wn.onkey(taround, "s")
-                wn.onkey(penrise, "r")
-                wn.onkey(penfall, "f")
-        
-                turtle.listen()
-        
                 turtle.mainloop()
 
         elif trtlamount == 2:
@@ -232,503 +151,103 @@ if ispog == "yes":
              trtl2shape = turtle.textinput("turtle shape", "what shape is turtle 2? arrow, turtle, circle, square or triangle. lowercase, anything else for classic")
              trtl2gender = turtle.textinput("turtle gender", "what gender is turtle 2? male or female, lowercase, anything else for non-binary")
 
-             if trtlgender == "male":
+             wn.bgcolor(wndwbgcolor)
 
-                wn.bgcolor(wndwbgcolor)
-
-                david = turtle.Turtle()
-                david.color(trtlpencolor, trtlfillcolor)
-                david.pensize(width=trtlpenwidth)
-                if trtlshape == "arrow" or "turtle" or "circle" or "triangle" or "square":
+             trtl1 = turtle.Turtle()
+             trtl1.color(trtlpencolor, trtlfillcolor)
+             trtl1.pensize(width=trtlpenwidth)
+             if trtlshape == "arrow" or "turtle" or "circle" or "triangle" or "square":
                 
-                   david.shape(trtlshape)
-
-                else:
-                    david.shape("classic")
-            
-                def fwd():
-                    david.fd(75)
-
-                def tleft():
-                    david.left(45)
-
-                def tright():
-                    david.right(45)
-
-                def taround():
-                    david.left(180)
-
-                def penrise():
-                    david.penup()
-
-                def penfall():
-                    david.pendown()
-
-                wn.onkey(fwd, "w")
-                wn.onkey(tleft, "a")
-                wn.onkey(tright, "d")
-                wn.onkey(taround, "s")
-                wn.onkey(penrise, "r")
-                wn.onkey(penfall, "f")
-
-                if trtl2gender == "male":
-                    wn.title("Python Turtle - The Game: Now Playing As: david And daniel")
-                    
-                    daniel = turtle.Turtle()
-                    daniel.color(trtl2pencolor, trtl2fillcolor)
-                    david.pensize(width=trtl2penwidth)
-                    if trtl2shape == "arrow" or "turtle" or "circle" or "triangle" or "square":
-                
-                        daniel.shape(trtlshape)
-      
-                    else:
-                        daniel.shape("classic")
-            
-                    def fwd2():
-                        daniel.fd(75)
-
-                    def tleft2():
-                        daniel.left(45)
-
-                    def tright2():
-                        daniel.right(45)
-
-                    def taround2():
-                        daniel.left(180)
-
-                    def penrise2():
-                        daniel.penup()
-
-                    def penfall2():
-                        daniel.pendown()
-
-                    wn.onkey(fwd2, "i")
-                    wn.onkey(tleft2, "j")
-                    wn.onkey(tright2, "l")
-                    wn.onkey(taround2, "k")
-                    wn.onkey(penrise2, "o")
-                    wn.onkey(penfall2, "p")
-
-                    turtle.listen()
-
-                    turtle.mainloop()
-
-                elif trtl2gender == "female":
-
-                     wn.title("Python Turtle - The Game: Now Playing As: david And jane")
-                    
-                     jane = turtle.Turtle()
-                     jane.color(trtl2pencolor, trtl2fillcolor)
-                     jane.pensize(width=trtl2penwidth)
-                     if trtl2shape == "arrow" or "turtle" or "circle" or "triangle" or "square":
-                
-                         jane.shape(trtlshape)
-      
-                     else:
-                         jane.shape("classic")
-             
-                     def fwd2():
-                         jane.fd(75)
-
-                     def tleft2():
-                         jane.left(45)
-
-                     def tright2():
-                         jane.right(45)
-
-                     def taround2():
-                         jane.left(180)
-
-                     def penrise2():
-                         jane.penup()
-
-                     def penfall2():
-                         jane.pendown()
-
-                     wn.onkey(fwd2, "i")
-                     wn.onkey(tleft2, "j")
-                     wn.onkey(tright2, "l")
-                     wn.onkey(taround2, "k")
-                     wn.onkey(penrise2, "o")
-                     wn.onkey(penfall2, "p")
-
-                     turtle.listen()
-
-                     turtle.mainloop()
-
-                else:
-                    wn.title("Python Turtle - The Game: Now Playing As: david And robin")
-                    
-                    robin = turtle.Turtle()
-                    robin.color(trtl2pencolor, trtl2fillcolor)
-                    robin.pensize(width=trtl2penwidth)
-                    if trtl2shape == "arrow" or "turtle" or "circle" or "triangle" or "square":
-                
-                       robin.shape(trtlshape)
-      
-                    else:
-                        robin.shape("classic")
-            
-                    def fwd2():
-                        robin.fd(75)
-
-                    def tleft2():
-                        robin.left(45)
-
-                    def tright2():
-                        robin.right(45)
-
-                    def taround2():
-                        robin.left(180)
-
-                    def penrise2():
-                        robin.penup()
-
-                    def penfall2():
-                        robin.pendown()
-
-                    wn.onkey(fwd2, "i")
-                    wn.onkey(tleft2, "j")
-                    wn.onkey(tright2, "l")
-                    wn.onkey(taround2, "k")
-                    wn.onkey(penrise2, "o")
-                    wn.onkey(penfall2, "p")
-
-                    turtle.listen()
-
-                    turtle.mainloop()
-
-             if trtlgender == "female":
-
-                wn.bgcolor(wndwbgcolor)
-
-                jane = turtle.Turtle()
-                jane.color(trtlpencolor, trtlfillcolor)
-                jane.pensize(width=trtlpenwidth)
-                if trtlshape == "arrow" or "turtle" or "circle" or "triangle" or "square":
-                
-                   jane.shape(trtlshape)
-
-                else:
-                    jane.shape("classic")
-            
-                def fwd():
-                    jane.fd(75)
-
-                def tleft():
-                    jane.left(45)
-
-                def tright():
-                    jane.right(45)
-
-                def taround():
-                    jane.left(180)
-
-                def penrise():
-                    jane.penup()
-
-                def penfall():
-                    jane.pendown()
-
-                wn.onkey(fwd, "w")
-                wn.onkey(tleft, "a")
-                wn.onkey(tright, "d")
-                wn.onkey(taround, "s")
-                wn.onkey(penrise, "r")
-                wn.onkey(penfall, "f")
-
-                if trtl2gender == "male":
-                    wn.title("Python Turtle - The Game: Now Playing As: jane And david")
-                    
-                    david = turtle.Turtle()
-                    david.color(trtl2pencolor, trtl2fillcolor)
-                    david.pensize(width=trtl2penwidth)
-                    if trtl2shape == "arrow" or "turtle" or "circle" or "triangle" or "square":
-                
-                       david.shape(trtlshape)
-      
-                    else:
-                        david.shape("classic")
-            
-                    def fwd2():
-                        david.fd(75)
-
-                    def tleft2():
-                        david.left(45)
-
-                    def tright2():
-                        david.right(45)
-
-                    def taround2():
-                        david.left(180)
-
-                    def penrise2():
-                        daniel.penup()
-
-                    def penfall2():
-                        david.pendown()
-
-                    wn.onkey(fwd2, "i")
-                    wn.onkey(tleft2, "j")
-                    wn.onkey(tright2, "l")
-                    wn.onkey(taround2, "k")
-                    wn.onkey(penrise2, "o")
-                    wn.onkey(penfall2, "p")
-
-                    turtle.listen()
-
-                    turtle.mainloop()
-
-                elif trtl2gender == "female":
-
-                     wn.title("Python Turtle - The Game: Now Playing As: jane And jill")
-                    
-                     jill = turtle.Turtle()
-                     jill.color(trtl2pencolor, trtl2fillcolor)
-                     jill.pensize(width=trtl2penwidth)
-                     if trtl2shape == "arrow" or "turtle" or "circle" or "triangle" or "square":
-                
-                         jill.shape(trtlshape)
-      
-                     else:
-                         jill.shape("classic")
-             
-                     def fwd2():
-                         jill.fd(75)
-
-                     def tleft2():
-                         jill.left(45)
-
-                     def tright2():
-                         jill.right(45)
-
-                     def taround2():
-                         jill.left(180)
-
-                     def penrise2():
-                         jill.penup()
-
-                     def penfall2():
-                         jill.pendown()
-
-                     wn.onkey(fwd2, "i")
-                     wn.onkey(tleft2, "j")
-                     wn.onkey(tright2, "l")
-                     wn.onkey(taround2, "k")
-                     wn.onkey(penrise2, "o")
-                     wn.onkey(penfall2, "p")
-
-                     turtle.listen()
-
-                     turtle.mainloop()
-
-                else:
-                    wn.title("Python Turtle - The Game: Now Playing As: jill And robin")
-                    
-                    robin = turtle.Turtle()
-                    robin.color(trtl2pencolor, trtl2fillcolor)
-                    robin.pensize(width=trtl2penwidth)
-                    if trtl2shape == "arrow" or "turtle" or "circle" or "triangle" or "square":
-                
-                       robin.shape(trtlshape)
-      
-                    else:
-                        robin.shape("classic")
-            
-                    def fwd2():
-                        robin.fd(75)
-
-                    def tleft2():
-                        robin.left(45)
-
-                    def tright2():
-                        robin.right(45)
-
-                    def taround2():
-                        robin.left(180)
-
-                    def penrise2():
-                        robin.penup()
-
-                    def penfall2():
-                        robin.pendown()
-
-                    wn.onkey(fwd2, "i")
-                    wn.onkey(tleft2, "j")
-                    wn.onkey(tright2, "l")
-                    wn.onkey(taround2, "k")
-                    wn.onkey(penrise2, "o")
-                    wn.onkey(penfall2, "p")
-
-                    turtle.listen()
-
-                    turtle.mainloop()
+                trtl1.shape(trtlshape)
 
              else:
-
-                wn.bgcolor(wndwbgcolor)
-
-                robin = turtle.Turtle()
-                robin.color(trtlpencolor, trtlfillcolor)
-                robin.pensize(width=trtlpenwidth)
-                if trtlshape == "arrow" or "turtle" or "circle" or "triangle" or "square":
-                
-                   robin.shape(trtlshape)
-
-                else:
-                    robin.shape("classic")
+                 trtl1.shape("classic")
             
-                def fwd():
-                    robin.fd(75)
+             def fwd():
+                 trtl1.fd(75)
 
-                def tleft():
-                    robin.left(45)
+             def tleft():
+                 trtl1.left(45)
 
-                def tright():
-                    robin.right(45)
+             def tright():
+                 trtl1.right(45)
 
-                def taround():
-                    robin.left(180)
+             def taround():
+                 trtl1.left(180)
 
-                def penrise():
-                    robin.penup()
+             def penrise():
+                 trtl1.penup()
 
-                def penfall():
-                    robin.pendown()
+             def penfall():
+                 trtl1.pendown()
 
-                wn.onkey(fwd, "w")
-                wn.onkey(tleft, "a")
-                wn.onkey(tright, "d")
-                wn.onkey(taround, "s")
-                wn.onkey(penrise, "r")
-                wn.onkey(penfall, "f")
+             wn.onkey(fwd, "w")
+             wn.onkey(tleft, "a")
+             wn.onkey(tright, "d")
+             wn.onkey(taround, "s")
+             wn.onkey(penrise, "r")
+             wn.onkey(penfall, "f")
 
-                if trtl2gender == "male":
-                    wn.title("Python Turtle - The Game: Now Playing As: robin And david")
-                    
-                    david = turtle.Turtle()
-                    david.color(trtl2pencolor, trtl2fillcolor)
-                    david.pensize(width=trtl2penwidth)
-                    if trtl2shape == "arrow" or "turtle" or "circle" or "triangle" or "square":
+             trtl2 = turtle.Turtle()
+             trtl2.color(trtl2pencolor, trtl2fillcolor)
+             trtl2.pensize(width=trtlpenwidth)
+             if trtl2shape == "arrow" or "turtle" or "circle" or "triangle" or "square":
                 
-                       david.shape(trtlshape)
-      
-                    else:
-                        david.shape("classic")
+                   trtl2.shape(trtlshape)
+
+             else:
+                    trtl2.shape("classic")
             
-                    def fwd2():
-                        david.fd(75)
+             def fwd2():
+                    trtl2.fd(75)
 
-                    def tleft2():
-                        david.left(45)
+             def tleft2():
+                    trtl2.left(45)
 
-                    def tright2():
-                        david.right(45)
+             def tright2():
+                    trtl2.right(45)
 
-                    def taround2():
-                        david.left(180)
+             def taround2():
+                    trtl2.left(180)
 
-                    def penrise2():
-                        daniel.penup()
+             def penrise2():
+                    trtl2.penup()
 
-                    def penfall2():
-                        david.pendown()
+             def penfall2():
+                    trtl2.pendown()
 
-                    wn.onkey(fwd2, "i")
-                    wn.onkey(tleft2, "j")
-                    wn.onkey(tright2, "l")
-                    wn.onkey(taround2, "k")
-                    wn.onkey(penrise2, "o")
-                    wn.onkey(penfall2, "p")
+             wn.onkey(fwd, "i")
+             wn.onkey(tleft, "j")
+             wn.onkey(tright, "l")
+             wn.onkey(taround, "k")
+             wn.onkey(penrise, "o")
+             wn.onkey(penfall, "p")
 
-                    turtle.listen()
-
-                    turtle.mainloop()
-
-                elif trtl2gender == "female":
-
-                     wn.title("Python Turtle - The Game: Now Playing As: robin And jill")
-                    
-                     jill = turtle.Turtle()
-                     jill.color(trtl2pencolor, trtl2fillcolor)
-                     jill.pensize(width=trtl2penwidth)
-                     if trtl2shape == "arrow" or "turtle" or "circle" or "triangle" or "square":
+             if trtlgender == "male":
+              if trtl2gender == "male":
+                wn.title("Python Turtle - The Game: Now Playing As: david And daniel")
+              elif trtl2gender == "female":
+                  wn.title("Python Turtle - The Game: Now Playing As: david And jane")
+              else:
+                wn.title("Python Turtle - The Game: Now Playing As: david And robin")
+          
+             elif trtlgender == "female":
+               if trtl2gender == "male":
+                wn.title("Python Turtle - The Game: Now Playing As: jane And david")
+               elif trtl2gender == "female":
+                  wn.title("Python Turtle - The Game: Now Playing As: jane And jill")
+               else:
+                wn.title("Python Turtle - The Game: Now Playing As: jane And robin")
                 
-                         jill.shape(trtlshape)
-      
-                     else:
-                         jill.shape("classic")
-             
-                     def fwd2():
-                         jill.fd(75)
-
-                     def tleft2():
-                         jill.left(45)
-
-                     def tright2():
-                         jill.right(45)
-
-                     def taround2():
-                         jill.left(180)
-
-                     def penrise2():
-                         jill.penup()
-
-                     def penfall2():
-                         jill.pendown()
-
-                     wn.onkey(fwd2, "i")
-                     wn.onkey(tleft2, "j")
-                     wn.onkey(tright2, "l")
-                     wn.onkey(taround2, "k")
-                     wn.onkey(penrise2, "o")
-                     wn.onkey(penfall2, "p")
-
-                     turtle.listen()
-
-                     turtle.mainloop()
-
-                else:
-                    wn.title("Python Turtle - The Game: Now Playing As: robin And rowan")
-                    
-                    rowan = turtle.Turtle()
-                    rowan.color(trtl2pencolor, trtl2fillcolor)
-                    rowan.pensize(width=trtl2penwidth)
-                    if trtl2shape == "arrow" or "turtle" or "circle" or "triangle" or "square":
-                
-                       rowan.shape(trtlshape)
-      
-                    else:
-                        rowan.shape("classic")
-            
-                    def fwd2():
-                        rowan.fd(75)
-
-                    def tleft2():
-                        rowan.left(45)
-
-                    def tright2():
-                        rowan.right(45)
-
-                    def taround2():
-                        rowan.left(180)
-
-                    def penrise2():
-                        rowan.penup()
-
-                    def penfall2():
-                        rowan.pendown()
-
-                    wn.onkey(fwd2, "i")
-                    wn.onkey(tleft2, "j")
-                    wn.onkey(tright2, "l")
-                    wn.onkey(taround2, "k")
-                    wn.onkey(penrise2, "o")
-                    wn.onkey(penfall2, "p")
-
-                    turtle.listen()
-
-                    turtle.mainloop()
+             else:
+               if trtl2gender == "male":
+                wn.title("Python Turtle - The Game: Now Playing As: robin And david")
+               elif trtl2gender == "female":
+                  wn.title("Python Turtle - The Game: Now Playing As: robin And jane")
+               else:
+                wn.title("Python Turtle - The Game: Now Playing As: robin And rowan")
+             turtle.listen()
+             turtle.mainloop()
 
         elif trtlamount == 3:
              trtl2pencolor = turtle.textinput("turtle color", "what color is turtle 2? lowercase")
@@ -989,36 +508,36 @@ if ispog == "yes":
 
                      turtle.mainloop()
 
-                      if trtl3gender == "male":
+                     if trtl3gender == "male":
                         wn.title("Python Turtle - The Game: Now Playing As: david, jane and daniel")
                         
                         daniel = turtle.Turtle()
                         daniel.color(trtl2pencolor, trtl2fillcolor)
-                        damien.pensize(width=trtl2penwidth)
+                        daniel.pensize(width=trtl2penwidth)
                         if trtl2shape == "arrow" or "turtle" or "circle" or "triangle" or "square":
                     
-                            damien.shape(trtlshape)
+                            daniel.shape(trtlshape)
           
                         else:
-                            damien.shape("classic")
+                            daniel.shape("classic")
                 
                         def fwd3():
-                            damien.fd(75)
+                            daniel.fd(75)
 
                         def tleft3():
-                            damien.left(45)
+                            daniel.left(45)
 
                         def tright3():
-                            damien.right(45)
+                            daniel.right(45)
 
                         def taround3():
-                            damien.left(180)
+                            daniel.left(180)
 
                         def penrise3():
-                            damien.penup()
+                            daniel.penup()
 
                         def penfall3():
-                            damien.pendown()
+                            daniel.pendown()
 
                         wn.onkey(fwd3, "g")
                         wn.onkey(tleft3, "v")
@@ -1031,37 +550,37 @@ if ispog == "yes":
 
                         turtle.mainloop()
 
-                    elif trtl3gender == "female":
+                     elif trtl3gender == "female":
 
-                         wn.title("Python Turtle - The Game: Now Playing As: david, daniel and jane")
+                         wn.title("Python Turtle - The Game: Now Playing As: david, jane and jill")
                         
-                         jane = turtle.Turtle()
-                         jane.color(trtl2pencolor, trtl2fillcolor)
-                         jane.pensize(width=trtl2penwidth)
+                         jill = turtle.Turtle()
+                         jill.color(trtl2pencolor, trtl2fillcolor)
+                         jill.pensize(width=trtl2penwidth)
                          if trtl2shape == "arrow" or "turtle" or "circle" or "triangle" or "square":
                     
-                             jane.shape(trtlshape)
+                             jill.shape(trtlshape)
           
                          else:
-                             jane.shape("classic")
+                             jill.shape("classic")
                  
                          def fwd3():
-                             jane.fd(75)
+                             jill.fd(75)
 
                          def tleft3():
-                             jane.left(45)
+                             jill.left(45)
 
                          def tright3():
-                             jane.right(45)
+                             jill.right(45)
 
                          def taround3():
-                             jane.left(180)
+                             jill.left(180)
 
                          def penrise3():
-                             jane.penup()
+                             jill.penup()
 
                          def penfall3():
-                             jane.pendown()
+                             jill.pendown()
 
                          wn.onkey(fwd3, "g")
                          wn.onkey(tleft3, "v")
@@ -1074,8 +593,8 @@ if ispog == "yes":
 
                          turtle.mainloop()
 
-                    else:
-                        wn.title("Python Turtle - The Game: Now Playing As: david, daniel and robin")
+                     else:
+                        wn.title("Python Turtle - The Game: Now Playing As: david, jane and robin")
                         
                         robin = turtle.Turtle()
                         robin.color(trtl2pencolor, trtl2fillcolor)
@@ -1117,7 +636,7 @@ if ispog == "yes":
                         turtle.mainloop()
 
                 else:
-                    wn.title("Python Turtle - The Game: Now Playing As: david And robin")
+                    wn.title("Python Turtle - The Game: Now Playing As: david, robin")
                     
                     robin = turtle.Turtle()
                     robin.color(trtl2pencolor, trtl2fillcolor)

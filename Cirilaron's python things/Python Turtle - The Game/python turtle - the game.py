@@ -1,14 +1,13 @@
 import turtle
-import random
 
 wn = turtle.Screen()
 wn.bgcolor("black")
 
 defaultsettings = turtle.textinput("settings", "wanna use default settings? yes or no, lowercase")
 if defaultsettings == "yes":
-    
+
     wn.bgcolor("black")
-    wn.title("Python Turtle - The Game: Now Playing As: daniel")
+    wn.title("Python Turtle - The Game: Now Playing As: david")
 
     david = turtle.Turtle()
     david.color("white", "gray")
