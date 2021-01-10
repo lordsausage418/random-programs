@@ -1,5 +1,53 @@
 import turtle
 import tkinter as tk
+from time import sleep
+from sys import exit
+
+isPog = "waiting"
+
+while isPog == "waiting":
+    question = tk.Tk()
+    question.title("ADHP")
+    question.config(bg="black")
+    question.geometry("300x300")
+    questionlbl = tk.Label(
+        question,
+        bg="black",
+        fg="green",
+        text=
+        "Is david the turtle pog?",
+        font=("Courier", 15))
+    def proceed():
+        global isPog
+        isPog = True
+        question.destroy()
+    def notpog():
+        global isPog
+        isPog = False
+        exit()
+    def pogYes():
+        questionlbl.config(text=":)", font=("Courier", 50))
+        answerYes.config(text="Proceed", command=proceed)
+        answerNo.pack_forget()
+        answerYes.pack_forget()
+        answerYes.pack(side="bottom")
+    def pogNo():
+        questionlbl.config(text=">:(", font=("Courier", 50))
+        answerNo.config(text="Exit", command=notpog)
+        answerYes.pack_forget()
+        answerNo.pack_forget()
+        answerNo.pack(side="bottom")
+    answerYes = tk.Button(question, text="Yes", command=pogYes)
+    answerNo = tk.Button(question, text="No", command=pogNo)
+    questionlbl.pack(side="top")
+    answerYes.pack(side="left")
+    answerNo.pack(side="right")
+    question.mainloop()
+
+if isPog:
+    sleep(0.1)
+elif isPog == False:
+    exit()
 
 numberofpog = 0
 numberofpoggers = 0
@@ -103,19 +151,19 @@ dmsbutton = tk.Button(
 
 
 def triangle():
-    trianglestring = """    /\
-    /  \
-    /    \
-    /      \
-    /        \
-    /          \
-    /            \
-    /              \
-    /                \
-    /                  \
-    /                    \
-    /                      \
-    /________________________\
+    trianglestring = """    /\\
+    /  \\
+    /    \\
+    /      \\
+    /        \\
+    /          \\
+    /            \\
+    /              \\
+    /                \\
+    /                  \\
+    /                    \\
+    /                      \\
+    /________________________\\
     triangle go brr"""
     labelone.config(text=trianglestring)
     labeltwo.config(text="Press back to return to program menu")
