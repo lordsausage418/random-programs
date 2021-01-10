@@ -14,29 +14,33 @@ while isPog == "waiting":
         question,
         bg="black",
         fg="green",
-        text=
-        "Is david the turtle pog?",
+        text="Is david the turtle pog?",
         font=("Courier", 15))
+
     def proceed():
         global isPog
         isPog = True
         question.destroy()
+
     def notpog():
         global isPog
         isPog = False
         exit()
+
     def pogYes():
         questionlbl.config(text=":)", font=("Courier", 50))
         answerYes.config(text="Proceed", command=proceed)
         answerNo.pack_forget()
         answerYes.pack_forget()
         answerYes.pack(side="bottom")
+
     def pogNo():
         questionlbl.config(text=">:(", font=("Courier", 50))
         answerNo.config(text="Exit", command=notpog)
         answerYes.pack_forget()
         answerNo.pack_forget()
         answerNo.pack(side="bottom")
+
     answerYes = tk.Button(question, text="Yes", command=pogYes)
     answerNo = tk.Button(question, text="No", command=pogNo)
     questionlbl.pack(side="top")
@@ -80,22 +84,35 @@ labeltwo = tk.Label(
     text="Press the button to open the program menu")
 labeltwo.config(font=("Courier", 15))
 labeltwo.pack(side="top")
-labelthree = tk.Label(bottomframe, bg="black", fg="green", text="Poggers x" + str(numberofpoggers), font=("Courier", 15))
+labelthree = tk.Label(
+    bottomframe,
+    bg="black",
+    fg="green",
+    text="Poggers x" + str(numberofpoggers),
+    font=("Courier", 15))
+
 
 def pog():
     global numberofpog
-    numberofpog+=1
+    numberofpog += 1
     print("pog")
     labeltwo.config(text="Pog x" + str(numberofpog))
+
+
 def poggers():
     global numberofpoggers
-    numberofpoggers+=1
+    numberofpoggers += 1
     print("poggers")
     labelthree.config(text="Poggers x" + str(numberofpoggers))
+
+
 def justpog():
     buttonofpog.config(text="button of pog", command=pog)
+
+
 def gers():
     buttonofpog.config(text="button of poggers", command=poggers)
+
 
 buttonofpog = tk.Button(frame, text="button of pog", command=pog)
 justpogbutton = tk.Button(frame, text="just pog", command=justpog)
@@ -107,13 +124,17 @@ screenboi.bgcolor("black")
 
 david = turtle.RawTurtle(screenboi)
 
+
 def pogprinter():
     trianglerun.pack_forget()
     dmsbutton.pack_forget()
     pogprinterbutton.pack_forget()
     prgrmsbutton.pack_forget()
     prgrmsbutton.config(text="Back", command=programsmenu)
-    labelone.config(text="press button to pog.\npress other buttons to change to poggers or back")
+    labelone.config(
+        text=
+        "press button to pog.\npress other buttons to change to poggers or back"
+    )
     labeltwo.config(text="Pog x" + str(numberofpog))
     labelthree.pack(side="top")
     prgrmsbutton.pack(side="bottom")
@@ -121,7 +142,10 @@ def pogprinter():
     justpogbutton.pack(side="left")
     gersbutton.pack(side="right")
 
-pogprinterbutton = tk.Button(bottomframe, text="PogPrinter", command=pogprinter)
+
+pogprinterbutton = tk.Button(
+    bottomframe, text="PogPrinter", command=pogprinter)
+
 
 def darkmodesquare():
     trianglerun.pack_forget()
