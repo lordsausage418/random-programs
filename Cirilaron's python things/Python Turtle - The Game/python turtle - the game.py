@@ -3,7 +3,7 @@ import tkinter as tk
 
 ispog = "waiting"
 question = tk.Tk()
-question.geometry("200x100")
+question.geometry("250x100")
 question.title("ADHP")
 lbl = tk.Label(question, text="is david the turtle pog?")
 lbl.grid(column=5, row=0)
@@ -29,12 +29,9 @@ question.mainloop()
 
 if ispog == "yes":
 
-    wn = turtle.Screen()
-    wn.bgcolor("black")
-
     defaultsettings = "waiting"
     question = tk.Tk()
-    question.geometry("200x100")
+    question.geometry("250x100")
     question.title("default settings")
     lbl = tk.Label(question, text="do you wanna use default settings?")
     lbl.grid(column=5, row=0)
@@ -57,6 +54,7 @@ if ispog == "yes":
 
     if defaultsettings == "yes":
 
+        wn = turtle.Screen()
         wn.bgcolor("black")
         wn.title("Python Turtle - The Game: Now Playing As: david")
         trtl1 = turtle.Turtle()
@@ -116,6 +114,7 @@ if ispog == "yes":
         )
 
         if trtlamount == 1:
+            wn = turtle.Screen()
             wn.bgcolor(wndwbgcolor)
 
             trtl1 = turtle.Turtle()
@@ -180,7 +179,7 @@ if ispog == "yes":
                 "turtle gender",
                 "what gender is turtle 2? male or female, lowercase, anything else for non-binary"
             )
-
+            wn = turtle.Screen()
             wn.bgcolor(wndwbgcolor)
 
             trtl1 = turtle.Turtle()
@@ -328,7 +327,7 @@ if ispog == "yes":
                 "turtle gender",
                 "what gender is turtle 3? male or female, lowercase, anything else for non-binary"
             )
-
+            wn = turtle.Screen()
             wn.bgcolor(wndwbgcolor)
 
             trtl1 = turtle.Turtle()
