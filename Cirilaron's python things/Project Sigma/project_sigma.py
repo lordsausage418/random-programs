@@ -81,7 +81,7 @@ labeltwo = tk.Label(
     bottomframe,
     bg="black",
     fg="green",
-    text="Press the button to open the program menu")
+    text="Press the \"Programs\" button to open the program menu")
 labeltwo.config(font=("Courier", 15))
 labeltwo.pack(side="top")
 labelthree = tk.Label(
@@ -207,6 +207,7 @@ def programsmenu():
     justpogbutton.pack_forget()
     gersbutton.pack_forget()
     labelthree.pack_forget()
+    quitbtn.pack_forget()
     labelone.config(
         text=
         "Program List:\nTriangle: draws a triangle with ASCII\nDark Mode Square: draws a white square using turtle\nPogPrinter: prints your pogs into the console\n(will be removed when no console) and counts them\nPress Back to go to the main menu"
@@ -221,21 +222,25 @@ def programsmenu():
     pogprinterbutton.pack(side="bottom")
     david.clear()
 
+quitbtn = tk.Button(bottomframe, text="Exit", command=exit)
 
 def mainmenu():
     labelone.config(
         text=
         "Hi, i'm a program made by Cirilaron.\n My name is Sigma.\n I will have most of his programs later."
     )
-    labeltwo.config(text="Press the button to open the command menu")
+    labeltwo.config(text="Press the \"Programs\" button to open the program menu")
     trianglerun.pack_forget()
     dmsbutton.pack_forget()
     pogprinterbutton.pack_forget()
     prgrmsbutton.pack_forget()
     prgrmsbutton.config(text="Programs", command=programsmenu)
-    prgrmsbutton.pack(side="bottom")
+    prgrmsbutton.pack(side="right")
+    quitbtn.pack(side="left")
 
 
 prgrmsbutton = tk.Button(bottomframe, text="Programs", command=programsmenu)
-prgrmsbutton.pack(side="bottom")
+
+mainmenu()
+
 root.mainloop()
