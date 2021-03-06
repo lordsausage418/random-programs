@@ -1,0 +1,4 @@
+.DS_Store
+.replit
+poetry.lock
+pyproject.lock
