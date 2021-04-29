@@ -1,3 +1,4 @@
+#/bin/python3
 print("is david the turtle pog")
 answer = input()
 if answer == "yes":

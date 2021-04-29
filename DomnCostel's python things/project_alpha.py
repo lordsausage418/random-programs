@@ -1,3 +1,4 @@
+#!/bin/python3
 import time as wait 
 import tkinter as tk
 import _thread

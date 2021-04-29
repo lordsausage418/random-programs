@@ -1,3 +1,4 @@
+#!/bin/python3
 import random
 print("Do I want to the stupid thing Im about to do?")
 a = input("type hm to start\n")

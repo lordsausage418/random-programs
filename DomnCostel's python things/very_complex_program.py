@@ -1,3 +1,4 @@
+#!/bin/python3
 print("hello world")
 input()
 #comment from Cirilaron: wow thats very complex

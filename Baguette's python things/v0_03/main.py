@@ -1,3 +1,4 @@
+#/bin/python3
 import pygame
 #import the pygame library
 

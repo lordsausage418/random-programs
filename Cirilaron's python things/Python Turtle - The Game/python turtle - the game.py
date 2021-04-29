@@ -1,3 +1,4 @@
+#/bin/python3
 import turtle
 import tkinter as tk
 
