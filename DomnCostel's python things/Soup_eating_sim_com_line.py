@@ -1,12 +1,28 @@
 from time import sleep
+import os
 
-#soup
+#ingridients 
 soup = """
  \##############/
   \____________/"""
+salt= """
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣴⣶⣶⣦⣀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣤⣶⣾⣿⣿⡿⠟⠋⣡⣽⡳⡄⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣴⣾⣿⣿⣿⣿⠛⢿⣷⣴⣿⣷⡹⣿⣿⣞⣆⠀
+⠀⠀⠀⠀⠀⠀⠀⣠⠴⣾⣿⡿⢋⣉⣿⣿⠻⣿⣷⡈⢿⣿⣿⣿⣷⡘⣿⣿⡞⡄
+⠀⠀⠀⠀⠀⠀⢸⡟⠳⣮⢻⣧⡘⠿⣿⣿⡸⠝⢿⣿⡌⠟⣉⣬⣿⣿⣿⣿⡇⠇
+⠀⠀⠀⠀⠀⠀⢸⠀⠀⠈⠷⡹⣿⣶⡄⠹⣧⠰⣦⣹⣿⣾⣿⣿⣿⣿⣿⢿⡇⡀
+⠀⠀⠀⠀⠀⠀⢸⠀⠀⠀⠀⠱⡹⣿⠋⣰⣿⣶⣿⣿⣿⣿⣿⣿⣿⣿⠿⠚⢡⠃
+⠀⠀⠀⠀⠀⠀⠘⡀⣽⣦⠀⠀⢱⢹⣿⣿⡿⠟⠋⢹⣻⡽⠿⠛⢉⠠⠔⠊⠁⠀
+⠀⠀⠀⠀⠀⠀⠀⠱⡈⠇⠡⠀⠀⡆⣿⣟⣠⠴⠚⠉⣀⠤⠒⠉⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢀⠤⡀⠀⠑⣌⠂⠀⢀⣇⠇⠉⣀⠤⠒⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠠⠊⠁⠀⠈⠰⢄⠈⠙⠿⠻⠞⠊⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⢠⣊⡁⠀⠀⠀⠀⠀⠀⠗⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠉⠒⠁⠒⠒⠒⠚⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀
+"""
 
 #list of soupy answers
-soupyanswers = ["eat soup", "eat", "eat the soup", "soup"]
+soupyanswers = ["eat soup", "eat", "eat the soup", "soup", "add salt"]
 soupyanswerswithnosoup = ["eat soup", "eat", "eat the soup"]
 
 #soupy functions
@@ -15,8 +31,12 @@ def eatsoup():
 
 def die():
   print("You die a soupy death, and ascend into the Eternal Sea, and meet Crab God, and rave.")
-  print("                                     THE END.                                       ")
-
+  print("                                     THE END.(end 1 of ?)                           ")
+def live():
+  print("The soup was initially poisoned, like all soup is, but the salt neutralized it so you lived")
+  print("                                     THE END.(end 2 of ?)                                  ")
+def saltydeath():
+  print("you ate way too much salt and died a salty death. you ascend into the Eternal sea, meet Crab God, and rave till the end of time")
 #the eating
 print("Eat the soup.")
 print(soup)
@@ -31,8 +51,15 @@ while answer1 not in soupyanswerswithnosoup: #loop of soup
   else:
     if answer1 == "soup":
       print("soup") #soup
-    else:
-      soupeaten = True
+      if answer1 =="add salt":
+      print(salt)
+      salty=int(input("how many salt shakes dumbass?"))
+        if salty <= 9:
+        eatsoup()
+        die()
+        if salty >=9 and salty <=19          
+       else:
+         soupeaten = True
 
 #soupy death
 if soupeaten:
